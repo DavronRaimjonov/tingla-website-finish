@@ -1,0 +1,71 @@
+.audio {
+  margin-top: 50px;
+  position: relative;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 50px;
+  }
+  &_right {
+    width: 50%;
+  }
+  &_left {
+    width: 50%;
+    background: url(../img/vektor4.png);
+    background-size: cover;
+    border-radius: 100%;
+    h1 {
+      font-weight: 600;
+      font-size: 40px;
+      color: #000000;
+      padding-bottom: 30px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: #000000;
+    }
+  }
+  &_vektor {
+    position: absolute;
+    bottom: -20%;
+    left: 6%;
+  }
+}
+
+@media (max-width: 850px) {
+  .audio > div {
+    flex-direction: column;
+  }
+  .audio_left {
+    width: 90%;
+  }
+  .audio_right {
+    width: 100%;
+    text-align: center;
+  }
+  .audio_vektor {
+    top: 0;
+    left: auto;
+    right: 5%;
+    img {
+      width: 50px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .audio {
+    .audio_left {
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}
